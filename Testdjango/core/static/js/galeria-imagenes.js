@@ -69,8 +69,9 @@ function generar_galeria_imagenes(
 }
 
 function btnAction(identificadorImagen) {
+    buscarRaza("Afghan Hound");
 
-    console.log("mostrar spiner para reflejar la ejecución de la llamada ajax de fondo");
+    /*console.log("mostrar spiner para reflejar la ejecución de la llamada ajax de fondo");
     $("#ajax-loader-img-"+identificadorImagen).show();
 
     $.get(getBtnActionURL(), function(response){
@@ -97,7 +98,7 @@ function btnAction(identificadorImagen) {
                 
             };               
         });
-    });
+    });*/
 }
 
 function actualizarBarraProgreso(porcentaje) {
