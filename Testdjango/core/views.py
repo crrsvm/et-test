@@ -31,7 +31,7 @@ def agregar_proveedores(request):
         formulario = ProveedorForm(data=request.POST)
         if formulario.is_valid():
             formulario.save()
-            messages.success(request, 'Proveedor agregado exitosamente')
+            messages.success(request, 'Creación proveedor exitosa')
             return redirect(to='core:proveedores')
         data["form"] = formulario
     
@@ -51,7 +51,7 @@ def eliminar_proveedores(request,id):
 
     proveedores = get_object_or_404(Proveedor, id=id)
     proveedores.delete()
-    messages.success(request, 'Proveedor eliminado exitosamente')
+    messages.success(request, 'Eliminación proveedor existosa')
     return redirect(to='core:proveedores')   
 
 def modificar_proveedores(request,id):
@@ -64,7 +64,7 @@ def modificar_proveedores(request,id):
         formulario = ProveedorForm(data=request.POST, instance=proveedores)
         if formulario.is_valid():             
             formulario.save()       
-            messages.success(request, 'Proveedor modificado exitosamente')
+            messages.success(request, 'Modificación proveedor exisosa')
             return redirect(to='core:proveedores')                 
         data["form"] = formulario
     return render(request, 'core/modificar_proveedor.html', data)   
