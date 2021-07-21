@@ -16,13 +16,13 @@ def login(request):
     try:
         user = User.objects.get(username=username)
     except User.DoesNotExist:
-        return Response("Usuario inválido")
-    # validamos la pass
+        return Response("Usuario no existe")
+    # Valicación de contraseña
     pass_valido = check_password(password, user.password)
     if not pass_valido:
-        return Response("Password incorrecta")
+        return Response("Contraseña incorrecta")
 
-    # permite crear o recuperar el token
+    # Permite recuperación o creación de token
     token, created = Token.objects.get_or_create(user=user)
     # print(token.key)
     return Response(token.key)
