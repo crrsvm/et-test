@@ -36,7 +36,7 @@ def agregar_proveedor(request):
 @permission_classes ((IsAuthenticated,))
 def detalle_proveedor(request,id):
     """
-    Get, update, o delete de un proveedor en particular
+    Get, update, o delete de proveedor especifico
     """
     try:
         proveedor = Proveedor.objects.get(rut=id)
