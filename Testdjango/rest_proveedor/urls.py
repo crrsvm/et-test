@@ -8,3 +8,4 @@ urlpatterns = [
     path('detalle_proveedor/<id>', detalle_proveedor, name='detalle_proveedor'),
     path('login', login, name='login'),
 ]
+
