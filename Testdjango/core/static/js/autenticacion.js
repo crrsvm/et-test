@@ -1,12 +1,10 @@
 
 $(document).ready(function(){
 
-    // ocultar todos los div que tengan class "alert" y se encuentren
-    // dentro de un elemento cuyo id es "formulario-autenticacion".
+    //Oculta los div class "alert" que se encuentren dentro de elemento con id formulario-autenticacion.
     $("#formulario-autenticacion span.alert").hide();
 
-    // asocia en el evento blur del elemento de formulario con id "fieldUsuario" la llamada a la
-    // función de validar si el campo es vacío.
+    ///Si el campo es vacío, relaciona en el evento blur de #fieldUsuario la llamada a la función de validación.
     $("#fieldUsuario").change(function(){
         if ($(this).val().length >= 8) {
             if($(this).val().indexOf(' ') >= 0){
@@ -36,8 +34,8 @@ $(document).ready(function(){
         
         });
 
-    // asocia en el evento blur del elemento de formulario con id "fieldClave" la llamada a la
-    // función de validar si el campo es vacío.
+
+    //Si el campo es vacío, relaciona en el evento blur de #fieldClave la llamada a la fucnión de validación.
     $("#fieldClave").change(function(){
         ///^([0-9])*$/.test($(this).val())
         if ($(this).val().length >= 2 || /^\s+$/.test($(this).val())){
