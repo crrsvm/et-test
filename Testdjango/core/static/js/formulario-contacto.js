@@ -1,13 +1,11 @@
 
 $(document).ready(function(){
 
-    // ocultar todos los div que tengan class "alert" y se encuentren
-    // dentro de un elemento cuyo id es "formulario-contacto".
+    // Oculta div que contengan class "alert" y se encuentren en un elemento con id "formulario-contacto".
     $("#formulario-contacto span.alert").hide();
 
-    // función encargada de verificar si el valor del parámetro fieldValue
-    // es vacío y mostrar o esconder, según corresponda, el mensaje en el
-    // div de alerta asociado al campo indicado en el parámetro fieldName.
+    // Función que verifica si fieldValue es vacío y exhibe u oculta 
+    // el mensaje en div de alerta asociado al campo en el parámetro fieldname,respectivamente
     function validarCampoVacio(fieldValue, fieldId) {
         
         if (fieldValue.trim().length == 0) {
@@ -25,8 +23,7 @@ $(document).ready(function(){
         }
     }
 
-    // asocia en el evento blur del elemento de formulario con id "fieldTipoContacto" la llamada a la
-    // función de validar si el campo es vacío.
+    //Si el campo es vacío, relaciona en el evento blur de #fieldContacto la llamada a la función de validación.
     $("#fieldTipoContacto").change(function(){
         valorIngresado = $(this).val();
         console.log("No ha seleccionado un tipo de contacto: '"+valorIngresado+"'");
@@ -34,8 +31,7 @@ $(document).ready(function(){
         validarCampoVacio(valorIngresado, "fieldTipoContacto");
     });
 
-    // asocia en el evento blur del elemento de formulario con id "fieldNombre" la llamada a la
-    // función de validar si el campo es vacío.
+    //Si el campo es vacío, relaciona en el eventro blur de #fieldNombre la llamada a la función de validación.
     $("#fieldNombre").blur(function(){
         valorIngresado = $(this).val();
         console.log("El usuario ha dejado el campo nombre con el valor: '"+valorIngresado+"'");
@@ -43,8 +39,7 @@ $(document).ready(function(){
         validarCampoVacio(valorIngresado, "fieldNombre");
     });
    
-    // asocia en el evento blur del elemento de formulario con id "fieldEmail" la llamada a la
-    // función de validar si el campo es vacío.
+    //Si el campo es vacío, relaciona en el evento blur de #fieldMail la llamada a la fucnión de validación.
     $("#fieldEmail").blur(function(){
         valorIngresado = $(this).val();
         console.log("El usuario ha dejado el campo e-mail con el valor: '"+valorIngresado+"'");
@@ -52,8 +47,7 @@ $(document).ready(function(){
         validarCampoVacio(valorIngresado, "fieldEmail");
     });
 
-    // asocia en el evento blur del elemento de formulario con id "fieldFechaNacimiento" la llamada a la
-    // función de validar si el campo es vacío.
+    //Si el campo es vacío, relaciona en el evento blur de#fieldNacimiento la llamada a la función de validación.
     $("#fieldFechaNacimiento").blur(function(){
         valorIngresado = $(this).val();
         console.log("El usuario ha dejado el campo fechaNacimiento con el valor: '"+valorIngresado+"'");
@@ -61,8 +55,7 @@ $(document).ready(function(){
         validarCampoVacio(valorIngresado, "fieldFechaNacimiento");
     });
 
-    // asocia en el evento blur del elemento de formulario con id "fieldRut" la llamada a la
-    // función de validar si el campo es vacío.
+    //Si el campo es vacío, relaciona en el evento blur de #fieldRut la llamada a la función de validación
     $("#fieldRut").blur(function(){
         valorIngresado = $(this).val();
         console.log("El usuario ha dejado el campo RUT vacío: + '"+valorIngresado+"'");
@@ -70,8 +63,8 @@ $(document).ready(function(){
         validarCampoVacio(valorIngresado, "fieldRut");
     });
 
-    // asocia en el evento blur del elemento de formulario con id "fieldComentario" la llamada a la
-    // función de validar si el campo es vacío.
+    
+    //Si el campo es vacío, relaciona en el evento blur de #fieldComentario la llamada a la función de validación
     $("#fieldComentario").blur(function(){
         valorIngresado = $(this).val();
         console.log("El usuario ha dejado el campo comentario con el valor: '"+valorIngresado+"'");
